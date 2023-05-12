@@ -1,3 +1,5 @@
+const QS = element => document.querySelector(element);
+
 window.onload = function(){
     //JavaScript del Index
     let container = document.querySelector('.container');
@@ -28,7 +30,20 @@ window.onload = function(){
             destacado[i].classList.add('destacadoImpar');
         }
     }
-    
 
     container.style.display = 'block';
+
+    // acá empieza lo mío
+    let $menu = QS("#menu"),
+        logo = QS(".logoDH")
+
+
+    logo.onclick = () => {
+        $menu.classList.toggle("mostrar");
+    }
+
+    $menu.onmouseout = () => {
+        $menu.classList.toggle("mostrar");
+    };
+
 }

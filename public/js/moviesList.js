@@ -1,12 +1,12 @@
 window.onload = function(){
     let body = document.querySelector('body');
     let moviesListTitulo = document.querySelector('.moviesListTitulo');
+    let logo = document.querySelector("figure")
 
-    let modo = confirm('Desea modo oscuro');
-    if(modo){
+    logo.onmouseover = () => {
         body.style.backgroundColor = '#7f7f7f'
         body.classList.add('fondoMoviesList');
-    }
+    };
     
     console.log(body);
     moviesListTitulo.innerHTML = 'LISTADO DE PELÍCULAS';
